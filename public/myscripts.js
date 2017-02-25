@@ -78,7 +78,7 @@ function initiateChart(names){
         //$.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=' + name.toLowerCase() + '-c.json&callback=?',    function (data) {
         //$.getJSON('https://www.quandl.com/api/v3/datasets/WIKI/' + name.toLowerCase() + '.csv?api_key=o1DVmHWPWciMn5WLBU21',    function (data) {
         //$.getJSON('https://www.quandl.com/api/v3/datasets/YAHOO/'+name.toLowerCase()+'.json?start_date=2015-01-03&end_date=2015-02-03&order=asc', function(json) {
-        $.get('https://stocks-vozf.c9users.io/api/' + name.toLowerCase(), function(json) {
+        $.get(window.location.origin+'/api/' + name.toLowerCase(), function(json) {
             json = JSON.parse(json);
             if(json.dataset!=null)
             console.log((json.dataset.dataset_code));
