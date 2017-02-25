@@ -52,10 +52,11 @@ var names=['AAPL', 'GOOG', "AET", "MSFT"];
 
 io.on('connection', function(socket){
 
+
   socket.on('add', function(msg){
       
       	request({
-		uri: 'https://stocks-vozf.c9users.io/api/' + msg ,
+		uri: process.env.APP_URL+"api/" + msg ,
 		method: "GET",
 		timeout: 10000,
 		followRedirect: true,
